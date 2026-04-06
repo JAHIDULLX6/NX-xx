@@ -2,8 +2,8 @@ module.exports.config = {
   name: "antiname",
   eventType: ["log:user-nickname"],
   version: "0.0.1",
-  credits: "ARIF BABU",
-  description: "Ye bot ARIF BABU ne banaya hai"
+  credits: "SaGor",
+  description: "This bot has been created by SaGor"
 };
 
 module.exports.run = async function({ api, event, Users, Threads }) {
@@ -23,7 +23,7 @@ module.exports.run = async function({ api, event, Users, Threads }) {
         api.changeNickname(nickname, threadID, botID);
 
         return api.sendMessage(
-            { body: "😎 Sorry boss, aap mera naam change nahi kar sakte ✌️" },
+            { body: "😎 Sorry boss, you can't change my name. ✌️" },
             threadID
         );
     }
