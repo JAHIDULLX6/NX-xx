@@ -1,8 +1,8 @@
 module.exports.config = {
-  name: "restart",
+  name: "rest",
   version: "1.0.0",
   hasPermssion: 2, 
-  credits: "ARIF BABU",
+  credits: "SaGor",
   description: "Restart the bot (Admin only)",
   commandCategory: "System",
   usages: "",
