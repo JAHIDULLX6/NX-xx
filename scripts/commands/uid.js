@@ -2,17 +2,16 @@ module.exports.config = {
   name: "uid",
   version: "1.3.0",
   hasPermssion: 0,
-  credits: "ARIF BABU",
+  credits: "SaGor",
   description: "Get User ID (self / mention / reply)",
   commandCategory: "Tools",
   cooldowns: 5
 };
 
-// 🔒 CREATOR NAME LOCK
 function checkCredits(api, event) {
-  if (module.exports.config.credits !== "ARIF BABU") {
+  if (module.exports.config.credits !== "SaGor") {
     api.sendMessage(
-      "❌ This command is locked.\nCreator: ARIF BABU",
+      "❌ This command is locked.\nCreator: SaGor",
       event.threadID,
       event.messageID
     );
@@ -29,7 +28,7 @@ module.exports.run = function ({ api, event }) {
   // ============ 1️⃣ REPLY ============
   if (event.type === "message_reply" && event.messageReply?.senderID) {
     return api.sendMessage(
-      `📌 𝗨𝗦𝗘𝗥 𝗨𝗜𝗗:\n${event.messageReply.senderID} ❤️`,
+      `📌 𝗨𝗦𝗘𝗥 𝗨𝗜𝗗:\n${event.messageReply.senderID}`,
       event.threadID,
       event.messageID
     );
