@@ -4,8 +4,7 @@ module.exports.config = {
   name: "prefix",
   version: "1.0.0",
   hasPermssion: 0,
-  // ⚠️ DO NOT CHANGE - CREDIT LOCK
-  credits: "ARIF BABU",
+  credits: "SaGor",
   description: "THIS BOT IS MADE BY ARIF BABU",
   commandCategory: "BOT-PREFIX",
   usages: "PREFIX",
@@ -13,14 +12,14 @@ module.exports.config = {
 };
 
 // 🔐 CREDIT LOCK
-if (module.exports.config.credits !== "ARIF BABU") {
+if (module.exports.config.credits !== "SaGor") {
   throw new Error(
     "\n\n❌ CREDITS CHANGED!\n🔒 THIS COMMAND IS LOCKED BY ARIF BABU\nCOMMAND STOPPED\n"
   );
 }
 
 // ⭐ OWNER UID
-const OWNER_UID = "61572909482910";
+const OWNER_UID = "61581197276223";
 
 // ⭐ COMMON FUNCTION – Prefix Info
 async function sendPrefixInfo(api, threadID, messageID) {
