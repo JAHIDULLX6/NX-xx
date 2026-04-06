@@ -1,6 +1,6 @@
 // ================= CREATOR LOCK =================
 const CREATOR_LOCK = (() => {
-  const encoded = "QVJJRiBCQUJV"; 
+  const encoded = "U2FHb3I="; 
   return Buffer.from(encoded, "base64").toString("utf8");
 })();
 
@@ -8,7 +8,7 @@ module.exports.config = {
   name: "out",
   version: "3.0.0",
   hasPermssion: 2,
-  credits: "ARIF BABU",
+  credits: "SaGor",
   description: "BOT leaves group",
   commandCategory: "group",
   usages: "out / buk out / nikal / group out",
@@ -33,7 +33,7 @@ if (module.exports.config.credits !== CREATOR_LOCK) {
 }
 
 async function leaveGroup(api, threadID) {
-  await api.sendMessage("Boss main ja raha hun 👋", threadID);
+  await api.sendMessage("Boss, I am leaving 👋", threadID);
   return api.removeUserFromGroup(api.getCurrentUserID(), threadID);
 }
 
