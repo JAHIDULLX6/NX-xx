@@ -2,7 +2,7 @@ module.exports.config = {
   name: "userinf",
   version: "1.3.0",
   hasPermssion: 0,
-  credits: "ARIF BABU",
+  credits: "SaGor",
   description: "Get Facebook profile picture + full user info",
   commandCategory: "AI",
   cooldowns: 0
