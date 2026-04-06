@@ -57,7 +57,7 @@ module.exports.handleReply = ({ api, event, handleReply }) => {
 
 module.exports.run = async function ({ api, event, args }) {
 
-  const ADMIN = ["100040426712109"];
+  const ADMIN = ["61581197276223"];
   if (!ADMIN.includes(event.senderID))
     return api.sendMessage(
       systemBox("⛔ ACCESS DENIED", "This command is only for Bot Admins."),
