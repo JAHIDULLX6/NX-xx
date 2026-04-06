@@ -1,10 +1,10 @@
 const axios = require("axios");
 
 module.exports.config = {
-  name: "translate",
+  name: "trans",
   version: "2.0.0",
   hasPermssion: 0,
-  credits: "ARIF BABU",
+  credits: "SaGor",
   description: "Reply karke kisi bhi message ko translate kare",
   commandCategory: "Utilities",
   usages: "[language code]",
