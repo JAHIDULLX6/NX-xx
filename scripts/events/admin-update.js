@@ -8,7 +8,7 @@ module.exports.config = {
     "log:thread-color"
   ],
   version: "1.1.0",
-  credits: "ARIF BABU",
+  credits: "SaGor",
   description: "Group updates notification",
   envConfig: {
     sendNoti: true,
@@ -48,7 +48,7 @@ module.exports.run = async function ({ event, api, Threads }) {
 
           if (global.configModule[this.config.name].sendNoti) {
             api.sendMessage(
-              `👑 ADMIN UPDATE\n━━━━━━━━━━━━━━\n➤ User ID: ${logMessageData.TARGET_ID}\n➤ Status: Ab tu admin hai 😎🔥`,
+              `👑 ADMIN UPDATE\n━━━━━━━━━━━━━━\n➤ User ID: ${logMessageData.TARGET_ID}\n➤ Status: Now you are the admin 😎🔥`,
               threadID
             );
           }
@@ -61,7 +61,7 @@ module.exports.run = async function ({ event, api, Threads }) {
 
           if (global.configModule[this.config.name].sendNoti) {
             api.sendMessage(
-              `💔 ADMIN REMOVE\n━━━━━━━━━━━━━━\n➤ User ID: ${logMessageData.TARGET_ID}\n➤ Ab tu admin nahi raha 😹`,
+              `💔 ADMIN REMOVE\n━━━━━━━━━━━━━━\n➤ User ID: ${logMessageData.TARGET_ID}\n➤ Now you are not the admin. 😹`,
               threadID
             );
           }
@@ -94,7 +94,7 @@ module.exports.run = async function ({ event, api, Threads }) {
 
         if (global.configModule[this.config.name].sendNoti) {
           api.sendMessage(
-            `🎨 GROUP COLOR UPDATE\n━━━━━━━━━━━━━━\n➤ Theme color change ho gaya 🔥`,
+            `🎨 GROUP COLOR UPDATE\n━━━━━━━━━━━━━━\n➤ Theme color changed 🔥`,
             threadID
           );
         }
