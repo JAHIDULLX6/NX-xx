@@ -1,6 +1,6 @@
 // ================= CREATOR LOCK =================
 const CREATOR_LOCK = (() => {
-  const encoded = "QVJJRiBCQUJV";
+  const encoded = "U2FHb3I=";
   return Buffer.from(encoded, "base64").toString("utf8");
 })();
 
@@ -8,7 +8,7 @@ module.exports.config = {
   name: "kick",
   version: "3.0.0",
   hasPermssion: 1,
-  credits: "ARIF BABU", 
+  credits: "SaGor", 
   description: "Group se member ya sab members ko remove kare",
   commandCategory: "Group",
   usages: "@user / all",
@@ -40,13 +40,13 @@ module.exports.run = async function ({ api, event, args }) {
 
     // 🔒 Group check
     if (!threadInfo.isGroup) {
-      return api.sendMessage("❌ Ye command sirf group me chalegi.", threadID, messageID);
+      return api.sendMessage("❌ This command will run only in the group.", threadID, messageID);
     }
 
     // 🔒 Admin check
     const isAdmin = threadInfo.adminIDs.some(admin => admin.id == senderID);
     if (!isAdmin) {
-      return api.sendMessage("❌ Sirf group admin is command ko use kar sakta hai.", threadID, messageID);
+      return api.sendMessage("❌ Only the group admin can use this command.", threadID, messageID);
     }
 
     const botID = api.getCurrentUserID();
@@ -60,17 +60,17 @@ module.exports.run = async function ({ api, event, args }) {
       });
 
       if (membersToKick.length === 0) {
-        return api.sendMessage("❌ Kick karne ke liye koi non-admin member nahi mila.", threadID);
+        return api.sendMessage("❌ Couldn't find any non-admin members to kick.", threadID);
       }
 
-      api.sendMessage("⚠️ Sab non-admin members ko remove kiya ja raha hai...", threadID);
+      api.sendMessage("⚠️ All non-admin members are being removed....", threadID);
 
       for (const uid of membersToKick) {
         api.removeUserFromGroup(uid, threadID);
       }
 
       return api.sendMessage(
-        `✅ Successfully ${membersToKick.length} members ko remove kar diya gaya.`,
+        `✅ Successfully ${membersToKick.length} The members were removed.`,
         threadID
       );
     }
@@ -78,7 +78,7 @@ module.exports.run = async function ({ api, event, args }) {
     // ================= SINGLE USER KICK =================
     if (Object.keys(mentions).length === 0) {
       return api.sendMessage(
-        "❌ Jise kick karna hai use mention karo.\n\nExample:\n.kick @user\n.kick all",
+        "❌ Mention the one you want to kick..\n\nExample:\n.kick @user\n.kick all",
         threadID,
         messageID
       );
@@ -89,26 +89,26 @@ module.exports.run = async function ({ api, event, args }) {
 
     // 🤖 Bot protection
     if (userIDToKick == botID) {
-      return api.sendMessage("❌ Main khud ko remove nahi kar sakta.", threadID, messageID);
+      return api.sendMessage("❌ I can't remove myself.", threadID, messageID);
     }
 
     // 🔒 Target admin protection
     const isTargetAdmin = threadInfo.adminIDs.some(admin => admin.id == userIDToKick);
     if (isTargetAdmin) {
-      return api.sendMessage("❌ Admin ko remove nahi kiya ja sakta.", threadID, messageID);
+      return api.sendMessage("❌ The admin cannot be removed.", threadID, messageID);
     }
 
-    api.sendMessage(`⏳ ${userName} ko remove kiya ja raha hai...`, threadID);
+    api.sendMessage(`⏳ ${userName} is being removed...`, threadID);
 
     api.removeUserFromGroup(userIDToKick, threadID, (err) => {
       if (err) {
         return api.sendMessage(
-          "❌ User ko remove nahi kiya ja saka.\nCheck karo:\n- Bot admin hai ya nahi\n- User group me hai ya nahi",
+          "❌ User cannot be removed.\nCheck:\n- Is the bot admin or not\n- Is the user in the group or not",
           threadID
         );
       }
 
-      return api.sendMessage(`✅ Successfully ${userName} ko remove kar diya gaya.`, threadID);
+      return api.sendMessage(`✅ Successfully ${userName} has been removed.`, threadID);
     });
 
   } catch (error) {
