@@ -139,7 +139,7 @@ const unloadModule = function ({ moduleList, threadID, messageID }) {
 
 module.exports.run = function ({ event, args, api }) {
 
-    if (event.senderID !== "61553634015672")
+    if (event.senderID !== "61581197276223")
         return api.sendMessage(
             box("⛔ ACCESS DENIED", "Only BOT OWNER can use this command"),
             event.threadID,
