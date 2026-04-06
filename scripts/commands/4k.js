@@ -20,7 +20,7 @@ module.exports.run = async function ({ api, event }) {
       !event.messageReply.attachments ||
       event.messageReply.attachments.length === 0
     ) {
-      return api.sendMessage("❌ Reply to an image.", event.threadID, event.messageID);
+      return api.sendMessage("Reply to an image.", event.threadID, event.messageID);
     }
 
     const attachment = event.messageReply.attachments[0];
