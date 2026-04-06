@@ -4,7 +4,7 @@ module.exports.config = {
 	name: "thread",
 	version: "1.1.0",
 	hasPermssion: 2,
-	credits: "ARIF BABU",
+	credits: "SaGor",
 	description: "Ban / Unban / Search Group (System Control)",
 	commandCategory: "system",
 	usages: "thread ban <tid> | thread unban <tid> | thread search <name>",
