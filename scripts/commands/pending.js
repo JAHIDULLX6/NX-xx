@@ -1,13 +1,13 @@
 // ================= CREATOR LOCK =================
 const CREATOR_LOCK = (() => {
-  const encoded = "QVJJRiBCQUJV"; 
+  const encoded = "U2FHb3I="; 
   return Buffer.from(encoded, "base64").toString("utf8");
 })();
 
 module.exports.config = {
     name: "pending",
     version: "2.1.0",
-    credits: "ARIF BABU",
+    credits: "SaGor",
     hasPermssion: 2,
     description: "Pending Group Approval System (Hinglish)",
     commandCategory: "SYSTEM",
@@ -24,30 +24,30 @@ if (module.exports.config.credits !== CREATOR_LOCK) {
 
 module.exports.languages = {
     en: {
-        invaildNumber: "❌ Boss ye number galat hai 👉 %1\nDhyan se sahi number bhejo 😐",
+        invaildNumber: "❌ Boss this number is wrong 👉 %1\nDhyan send the correct number 😐",
 
-        cancelSuccess: "✅ Boss %1 group ko pending se hata diya gaya hai 🚫",
+        cancelSuccess: "✅ Boss %1 group has been removed from pending 🚫",
 
-        approveSuccess: "🎉 Boss aapne %1 group approve kar diya 🤝",
+        approveSuccess: "🎉 Boss, you have approved the %1 group. 🤝",
 
         notiBox:
-            "✅ Aapka group approve ho gaya hai 🎉\n" +
-            "📌 Commands dekhne ke liye 👉 #help | #help2",
-
+            "✅ Your group has been approved 🎉\n" +
+            "📌 To see the commands 👉 #help | #help2",
+      
         returnListPending:
             "╭──────── ★ ·.· ────────╮\n" +
             "        🔔 PENDING GROUPS\n" +
             "╰──────── ·.· ★ ────────╯\n\n" +
-            "👑 Boss aapke paas total %1 group pending mein hain\n\n" +
-            "%2\n" +
-            "✏️ Approve karne ke liye number bhejo\n" +
-            "🚫 Remove karne ke liye likho: c 1 2 3",
+            "👑 Boss, you have a total of %1 groups pending\n\n" +
+"%2\n" +
+            "✏️ Send number to approve\n" +
+            "🚫 To remove, write: c 1 2 3",
 
         returnListClean:
             "╭──────── ★ ·.· ────────╮\n" +
             "        🔔 PENDING GROUPS\n" +
             "╰──────── ·.· ★ ────────╯\n\n" +
-            "😎 Boss abhi koi bhi group pending mein nahi hai"
+            "😎 Boss, there is no group pending right now."
     }
 };
 
@@ -126,7 +126,7 @@ module.exports.run = async function ({ api, event, getText }) {
         list = [...spam, ...pending].filter(t => t.isGroup && t.isSubscribed);
     } catch (e) {
         return api.sendMessage(
-            "❌ Boss pending list load karne mein error aa gaya",
+            "❌ An error occurred loading the Boss pending list.",
             threadID,
             messageID
         );
