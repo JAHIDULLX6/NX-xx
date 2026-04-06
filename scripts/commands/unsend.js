@@ -1,16 +1,15 @@
-/* ========= HARD CREATOR LOCK ========= */
-const CREATOR_NAME = "ARIF BABU";
+const CREATOR_NAME = "SaGor";
 
 module.exports.config = {
   name: "uns",
   version: "1.0.5",
   hasPermssion: 0,
-  credits: "ARIF BABU",
+  credits: "SaGor",
   description: "Message ko unsend kare (prefix + no prefix)",
   commandCategory: "system",
   usages: "reply + uns / 👍 / unsend / #uns",
   cooldowns: 0,
-  usePrefix: true // ✅ PREFIX ENABLED
+  usePrefix: true 
 };
 
 // 🔒 CREDIT PROTECTION
@@ -20,8 +19,8 @@ if (module.exports.config.credits !== CREATOR_NAME) {
 
 module.exports.languages = {
   hi: {
-    returnCant: "📌 Aap kisi aur ka bheja hua message unsend nahi kar sakte. 😉",
-    missingReply: "📌 Jis message ko unsend karna hai, kripya us message par reply karein. 😉"
+    returnCant: "📌 You cannot unsend a message sent by someone else. 😉",
+    missingReply: "📌 Please reply to the message you want to unsend. 😉"
   }
 };
 
@@ -40,7 +39,6 @@ module.exports.handleEvent = async function ({ api, event, getText }) {
       body === "."
     ) {
 
-      // ❌ Dusre ka message unsend nahi hoga
       if (event.messageReply.senderID !== api.getCurrentUserID()) {
         return api.sendMessage(
           getText("returnCant"),
@@ -68,7 +66,6 @@ module.exports.run = function ({ api, event, getText }) {
     );
   }
 
-  // ❌ Dusre ka message unsend nahi hoga
   if (event.messageReply.senderID !== api.getCurrentUserID()) {
     return api.sendMessage(
       getText("returnCant"),
