@@ -6,7 +6,7 @@ module.exports.config = {
     name: "autoreset",
     version: "2.0.0",
     hasPermssion: 0,
-    credits: "ARIF-BABU",
+    credits: "SaGor",
     description: "Automatic Bot Restart (System Mode)",
     commandCategory: "system",
     cooldowns: 5
@@ -25,8 +25,8 @@ ${body}
 
 module.exports.handleEvent = async function ({ api }) {
 
-    const timeNow = moment.tz("Asia/Kolkata").format("HH:mm:ss");
-    const seconds = moment.tz("Asia/Kolkata").format("ss");
+    const timeNow = moment.tz("Asia/Dhaka").format("HH:mm:ss");
+    const seconds = moment.tz("Asia/Dhaka").format("ss");
     const adminIDs = global.config.ADMINBOT;
 
     // ⏰ Restart Hours (Every Hour)
@@ -60,7 +60,7 @@ module.exports.handleEvent = async function ({ api }) {
 /* ================= COMMAND RUN ================= */
 
 module.exports.run = async ({ api, event }) => {
-    const timeNow = moment.tz("Asia/Kolkata").format("HH:mm:ss");
+    const timeNow = moment.tz("Asia/Dhaka").format("HH:mm:ss");
     api.sendMessage(
         systemBox(
             "🕒 SYSTEM TIME",
