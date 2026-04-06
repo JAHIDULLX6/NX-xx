@@ -1,81 +1,76 @@
-const CREATOR_LOCK = (() => {
-  const encoded = "QVJJRiBCQUJV";
-  return Buffer.from(encoded, "base64").toString("utf8");
-})();
+const fs = require("fs");
+const { downloadVideo } = require("sagor-video-downloader");
 
-module.exports = {
-  config: {
-    name: "linkAutoDownload",
-    version: "1.4.0",
+module.exports.config = {
+    name: "autodown",
+    version: "1.0.0",
     hasPermssion: 0,
-    credits: "ARIF BABU",
-    description: "Automatically detects links in messages and downloads the file.",
-    commandCategory: "Utilities",
+    credits: "SAGOR",
+    description: "Auto download & send video from links",
+    commandCategory: "media",
     usages: "",
-    cooldowns: 5,
-  },
-
-  /* ================= CREATOR LOCK ================= */
-  onLoad: function () {
-    const fs = require("fs");
-
-    // 🔐 Credit Check (Base64 Protected)
-    if (this.config.credits !== CREATOR_LOCK) {
-      console.log("\n❌ Creator Lock Activated! Credits cannot be changed ❌\n");
-      process.exit(1);
-    }
-
-    // 🔐 Extra Self File Protection
-    const fileData = fs.readFileSync(__filename, "utf8");
-    if (!fileData.includes("QVJJRiBCQUJV")) {
-      console.log("\n❌ Lock Tampered! File Disabled ❌\n");
-      process.exit(1);
-    }
-  },
-  /* ================================================= */
-
-  run: async function () {},
-
-  handleEvent: async function ({ api, event }) {
-    const axios = require("axios");
-    const fs = require("fs-extra");
-    const { alldown } = require("arif-babu-downloader");
-
-    const body = (event.body || "").toLowerCase();
-
-    if (!body.startsWith("https://")) return;
-
-    try {
-      api.setMessageReaction("⏳", event.messageID, () => {}, true);
-
-      const data = await alldown(event.body);
-
-      if (!data || !data.data || !data.data.high) {
-        return api.sendMessage("❌ Valid download link not found.", event.threadID);
-      }
-
-      const videoURL = data.data.high;
-
-      const buffer = (
-        await axios.get(videoURL, { responseType: "arraybuffer" })
-      ).data;
-
-      const filePath = __dirname + "/cache/auto.mp4";
-      fs.writeFileSync(filePath, buffer);
-
-      api.setMessageReaction("✅", event.messageID, () => {}, true);
-
-      return api.sendMessage(
-        {
-          body: "",
-          attachment: fs.createReadStream(filePath),
-        },
-        event.threadID,
-        event.messageID
-      );
-    } catch (err) {
-      api.setMessageReaction("❌", event.messageID, () => {}, true);
-      return api.sendMessage("", event.threadID);
-    }
-  },
+    cooldowns: 5
 };
+
+module.exports.handleEvent = async function ({ api, event }) {
+
+    const { threadID, messageID, body } = event;
+    if (!body) return;
+
+    const linkMatches = body.match(/(https?:\/\/[^\s]+)/g);
+    if (!linkMatches) return;
+
+    const uniqueLinks = [...new Set(linkMatches)];
+
+    // loading reaction
+    api.setMessageReaction("⏳", messageID, () => {}, true);
+
+    let successCount = 0;
+    let failCount = 0;
+
+    for (const url of uniqueLinks) {
+        try {
+
+            const { title, filePath } = await downloadVideo(url);
+
+            if (!filePath || !fs.existsSync(filePath)) throw new Error();
+
+            const stats = fs.statSync(filePath);
+            const fileSizeInMB = stats.size / (1024 * 1024);
+
+            // limit 25MB
+            if (fileSizeInMB > 25) {
+                fs.unlinkSync(filePath);
+                failCount++;
+                continue;
+            }
+
+            await api.sendMessage(
+                {
+                    body:
+`📥 𝗩𝗜𝗗𝗘𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗
+━━━━━━━━━━━━━━━
+🎬 Title: ${title || "Video"}
+📦 Size: ${fileSizeInMB.toFixed(2)} MB
+━━━━━━━━━━━━━━━`,
+                    attachment: fs.createReadStream(filePath)
+                },
+                threadID
+            );
+
+            fs.unlinkSync(filePath);
+            successCount++;
+
+        } catch (e) {
+            failCount++;
+        }
+    }
+
+    const finalReaction =
+        successCount > 0 && failCount === 0 ? "✅" :
+        successCount > 0 ? "⚠️" : "❌";
+
+    api.setMessageReaction(finalReaction, messageID, () => {}, true);
+};
+
+module.exports.run = async function () {};
