@@ -6,7 +6,8 @@ module.exports.config = {
 	description: "tag all members",
 	commandCategory: "system",
 	usages: "[Text]",
-	cooldowns: 80
+	cooldowns: 3
+}
 };
 
 module.exports.run = async function({ api, event, args }) {
@@ -25,5 +26,4 @@ module.exports.run = async function({ api, event, args }) {
 
 	}
 	catch (e) { return console.log(e); }
-}
 }
