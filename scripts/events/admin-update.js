@@ -39,7 +39,6 @@ module.exports.run = async function ({ event, api, Threads }) {
 
     switch (logMessageType) {
 
-      /* ================= ADMIN UPDATE ================= */
       case "log:thread-admins": {
         if (logMessageData.ADMIN_EVENT === "add_admin") {
           if (!dataThread.adminIDs.some(i => i.id == logMessageData.TARGET_ID)) {
@@ -69,7 +68,6 @@ module.exports.run = async function ({ event, api, Threads }) {
         break;
       }
 
-      /* ================= GROUP ICON ================= */
       case "log:thread-icon": {
         let iconData = JSON.parse(fs.readFileSync(iconPath));
         const oldIcon = iconData[threadID] || "❓";
@@ -88,7 +86,6 @@ module.exports.run = async function ({ event, api, Threads }) {
         break;
       }
 
-      /* ================= GROUP COLOR ================= */
       case "log:thread-color": {
         dataThread.threadColor = logMessageData.thread_color || "🌤";
 
@@ -101,12 +98,10 @@ module.exports.run = async function ({ event, api, Threads }) {
         break;
       }
 
-      /* ================= NICKNAME ================= */
       case "log:user-nickname": {
         const userID = logMessageData.participant_id;
         const nickname = logMessageData.nickname || "";
 
-        // permission check
         if (
           typeof global.configModule["nickname"] !== "undefined" &&
           !global.configModule["nickname"].allowChange.includes(threadID) &&
@@ -125,7 +120,6 @@ module.exports.run = async function ({ event, api, Threads }) {
         break;
       }
 
-      /* ================= GROUP NAME ================= */
       case "log:thread-name": {
         dataThread.threadName = logMessageData.name || "No Name";
 
@@ -139,7 +133,12 @@ module.exports.run = async function ({ event, api, Threads }) {
       }
     }
 
-    await setData(threadID, { threadInfo: dataThread });
+    // ✅ FIXED PART ONLY
+    try {
+      await setData(threadID, { threadInfo: dataThread });
+    } catch (e) {
+      await Threads.createData(threadID, { threadInfo: dataThread });
+    }
 
   } catch (e) {
     console.log("adminUpdate error:", e);
