@@ -14,7 +14,7 @@ module.exports.config = {
 // 🔐 CREDIT LOCK
 if (module.exports.config.credits !== "SaGor") {
   throw new Error(
-    "\n\n❌ CREDITS CHANGED!\n🔒 THIS COMMAND IS LOCKED BY ARIF BABU\nCOMMAND STOPPED\n"
+    "CREDITS CHANGED!"
   );
 }
 
