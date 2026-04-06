@@ -158,8 +158,11 @@ try{
     const body = event.body ? event.body.toLowerCase() : ""
     if(body.startsWith("baby") || body.startsWith("bby") || body.startsWith("bot") || body.startsWith("বট")){
         const arr = body.replace(/^\S+\s*/, "")
+
       if(!arr) {
-    return await api.sendMessage("বেশি bot Bot করলে leave নিবো কিন্তু😒😒",
+
+    const msgs = [
+    "বেশি bot Bot করলে leave নিবো কিন্তু😒😒",
     "শুনবো না😼 তুমি আমার বস সাগর কে প্রেম করাই দাও নাই🥺পচা তুমি🥺",
     "আমি আবাল দের সাথে কথা বলি না,ok😒",
     "এতো ডেকো না,প্রেম এ পরে যাবো তো🙈",
@@ -213,34 +216,44 @@ try{
     "চুনা ও চুনা আমার বস সাগর এর হবু বউ রে কেও দেকছো খুজে পাচ্ছি না😪🤧😭",
     "স্বপ্ন তোমারে নিয়ে দেখতে চাই তুমি যদি আমার হয়ে থেকে যাও-💝🌺🌻",
     "জান হাঙ্গা করবা-🙊😝🌻",
-    "তোদের জন্য একটুও শান্তি নাই! শুধু ডিস্টার্ব করিস 😿",    
+    "তোদের জন্য একটুও শান্তি নাই! শুধু ডিস্টার্ব করিস 😿",
     "জান মেয়ে হলে চিপায় আসো বস সাগর এর থেকে অনেক ভালোবাসা শিখছি তোমার জন্য-🙊🙈😽",
     "ইসস এতো ডাকো কেনো লজ্জা লাগে তো-🙈🖤🌼",
-    "আমার বস সাগর এর পক্ষ থেকে তোমারে এতো এতো ভালোবাসা-🥰😽🫶 আমার বস সাগর ইসলামে'র জন্য দোয়া করবেন-💝💚🌺🌻",
-    "- ভালোবাসা নামক আব্লামি করতে মন চাইলে আমার বস সাগর এর ইনবক্স চলে যাও-🙊🥱👅 🌻",
-    "আমার জান তুমি শুধু আমার আমি তোমারে ৩৬৫ দিন ভালোবাসি-💝🌺😽",
-    "কিরে প্রেম করবি তাহলে বস সাগর এর ইনবক্সে গুতা দে 😘🤌",
-    "জান আমার বস সাগর কে বিয়ে করবা-🙊😘🥳", event.threadID, (error, info) => {
-          global.client.handleReply.push({
-            name: this.config.name,
-            type: "reply",
-            messageID: info.messageID,
-            author: event.senderID
-          });
-        }, event.messageID,
-      )
+    "আমার বস সাগর এর পক্ষ থেকে তোমারে এতো এতো ভালোবাসা-🥰😽🫶",
+    "ভালোবাসা করতে চাইলে বস সাগর এর ইনবক্স যাও-🙊🥱👅",
+    "আমার জান তুমি শুধু আমার 💝",
+    "কিরে প্রেম করবি তাহলে বস সাগর এর ইনবক্সে গুতা দে 😘",
+    "জান আমার বস সাগর কে বিয়ে করবা-🙊😘🥳"
+    ];
+
+    return api.sendMessage(
+      msgs[Math.floor(Math.random()*msgs.length)],
+      event.threadID,
+      (error, info) => {
+        global.client.handleReply.push({
+          name: this.config.name,
+          type: "reply",
+          messageID: info.messageID,
+          author: event.senderID
+        });
+      },
+      event.messageID
+    );
+      }
+
+      const a = (await axios.get(`${await baseApiUrl()}/baby?text=${encodeURIComponent(arr)}&senderID=${event.senderID}&font=1`)).data.reply;
+
+      return api.sendMessage(a, event.threadID, (error, info) => {
+        global.client.handleReply.push({
+          name: this.config.name,
+          type: "reply",
+          messageID: info.messageID,
+          author: event.senderID,
+          lnk: a
+        });
+      }, event.messageID);
     }
-    const a = (await axios.get(`${await baseApiUrl()}/baby?text=${encodeURIComponent(arr)}&senderID=${event.senderID}&font=1`)).data.reply;     
-      return  await api.sendMessage(a, event.threadID, (error, info) => {
-          global.client.handleReply.push({
-            name: this.config.name,
-            type: "reply",
-            messageID: info.messageID,
-            author: event.senderID,
-            lnk: a
-          });
-        }, event.messageID,
-      )}
+
 }catch(err){
     return api.sendMessage(`Error: ${err.message}`, event.threadID, event.messageID);
 }};
