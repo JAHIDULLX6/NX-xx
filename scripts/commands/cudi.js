@@ -10,7 +10,7 @@ module.exports.config = {
     dependencies: {
         "fs-extra": "",
         "axios": ""
-    
+    }
 };
 
   module.exports.run = async function({ api, args, Users, event}) {
