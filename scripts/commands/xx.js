@@ -79,7 +79,7 @@ module.exports.run = async ({ api, event, args }) => {
       return api.sendMessage("❌ No result!", event.threadID);
     }
 
-    const results = list.slice(0, 10).map(item => ({
+    const results = list.slice(0, 15).map(item => ({
       ...item,
       url: cleanUrl(item.url),
       thumbnail: cleanUrl(item.thumbnail)
