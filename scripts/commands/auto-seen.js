@@ -20,7 +20,7 @@ module.exports.config = {
     name: "autoseen",
     version: "1.0.0",
     hasPermssion: 2,
-    credits: "Dev Sy",
+    credits: "SaGor",
     description: "Auto seen all messages",
     commandCategory: "Tools",
     usages: "autoseen on/off",
