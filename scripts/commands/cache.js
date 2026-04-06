@@ -6,7 +6,7 @@ module.exports.config = {
   name: "cache",
   version: "2.0.0",
   hasPermssion: 2,
-  credits: "ARIF BABU",
+  credits: "SaGor",
   description: "Delete files or folders inside cache (System Mode)",
   commandCategory: "Admin-bot system",
   usages: "cache / cache start <text> / cache ext <text> / cache <text> / cache help",
