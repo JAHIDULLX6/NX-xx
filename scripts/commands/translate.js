@@ -5,7 +5,7 @@ module.exports.config = {
   version: "2.0.0",
   hasPermssion: 0,
   credits: "SaGor",
-  description: "Reply karke kisi bhi message ko translate kare",
+  description: "Translate any message by replying to it",
   commandCategory: "Utilities",
   usages: "[language code]",
   cooldowns: 5
@@ -79,7 +79,7 @@ module.exports.run = async function ({ api, event, args }) {
 
   if (!textToTranslate) {
     return api.sendMessage(
-      "❌ Replied message me text nahi mila.",
+      "❌ Replied message Error.",
       threadID,
       messageID
     );
