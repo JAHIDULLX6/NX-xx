@@ -2,8 +2,8 @@ module.exports.config = {
     name: "antirobbery",
     eventType: ["log:thread-admins"],
     version: "1.0.0",
-    credits: "ARIF BABU",
-    description: "Ye bot ARIF BABU ne banaya hai"
+    credits: "SaGor",
+    description: "create by SaGor"
 };
 
 module.exports.run = async function ({ event, api, Threads, Users }) {
@@ -36,13 +36,13 @@ module.exports.run = async function ({ event, api, Threads, Users }) {
                     function editAdminsCallback(err) {
                         if (err)
                             return api.sendMessage(
-                                "😛 Oops boss, thoda error aa gaya",
+                                "😛 Oops boss, a little error occurred.",
                                 event.threadID,
                                 event.messageID
                             );
 
                         return api.sendMessage(
-                            "🛡️ Anti-Robbery active hai boss 😐✌️\nAdmin permission allowed nahi hai",
+                            "🛡️ Anti-Robbery is active boss 😐✌️\nAdmin permission is not allowed",
                             event.threadID,
                             event.messageID
                         );
@@ -69,13 +69,13 @@ module.exports.run = async function ({ event, api, Threads, Users }) {
                     function editAdminsCallback(err) {
                         if (err)
                             return api.sendMessage(
-                                "😛 Oops boss, thoda error aa gaya",
+                                "😛 Oops boss, a little error occurred.",
                                 event.threadID,
                                 event.messageID
                             );
 
                         return api.sendMessage(
-                            "🛡️ Anti-Robbery active hai boss 😐✌️\nAdmin hatane ki permission nahi hai",
+                            "🛡️ Anti-Robbery is active boss 😐✌️\nAdmin removal is not allowed",
                             event.threadID,
                             event.messageID
                         );
