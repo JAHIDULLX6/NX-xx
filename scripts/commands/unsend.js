@@ -14,7 +14,7 @@ module.exports.config = {
 
 // 🔒 CREDIT PROTECTION
 if (module.exports.config.credits !== CREATOR_NAME) {
-  throw new Error("❌ Credits change kiye gaye! Command ARIF BABU dwara lock hai.");
+  throw new Error("Credits change");
 }
 
 module.exports.languages = {
