@@ -5,8 +5,8 @@
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Node.js-18%2B-green?style=for-the-badge&logo=nodedotjs" />
-  <img src="https://img.shields.io/badge/Code%20Style-Custom-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Node.js-20%2B-green?style=for-the-badge&logo=nodedotjs" />
+  <img src="https://img.shields.io/badge/Code%20Style-SaGor-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Platform-Facebook%20Messenger-purple?style=for-the-badge&logo=messenger" />
   <img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge" />
 </p>
