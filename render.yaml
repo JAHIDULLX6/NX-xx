@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: sagor-bot
+    runtime: node
+    buildCommand: |
+      apt-get update && apt-get install -y uuid-runtime libuuid1
+      npm install
+    startCommand: node index.js
