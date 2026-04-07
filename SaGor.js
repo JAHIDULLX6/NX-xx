@@ -1,1 +1,571 @@
-const _0x27e540=_0x3b19;(function(_0x30f773,_0x9d8ffd){const _0x2508b1=_0x3b19,_0x3f68bb=_0x30f773();while(!![]){try{const _0x192f4d=-parseInt(_0x2508b1(0xd8))/0x1*(parseInt(_0x2508b1(0x110))/0x2)+parseInt(_0x2508b1(0xd5))/0x3+parseInt(_0x2508b1(0xc7))/0x4*(-parseInt(_0x2508b1(0x16b))/0x5)+parseInt(_0x2508b1(0xe7))/0x6+parseInt(_0x2508b1(0x150))/0x7+-parseInt(_0x2508b1(0xc4))/0x8+parseInt(_0x2508b1(0x166))/0x9;if(_0x192f4d===_0x9d8ffd)break;else _0x3f68bb['push'](_0x3f68bb['shift']());}catch(_0x1d19b1){_0x3f68bb['push'](_0x3f68bb['shift']());}}}(_0x214a,0x8cf84));const _0x40a9e7=(function(){let _0x222b41=!![];return function(_0x1eee5d,_0x161a2b){const _0x3e25a2=_0x222b41?function(){if(_0x161a2b){const _0x7f945d=_0x161a2b['apply'](_0x1eee5d,arguments);return _0x161a2b=null,_0x7f945d;}}:function(){};return _0x222b41=![],_0x3e25a2;};}()),_0x526529=_0x40a9e7(this,function(){const _0x24914f=_0x3b19;return _0x526529[_0x24914f(0xbd)]()[_0x24914f(0xef)](_0x24914f(0xd1))[_0x24914f(0xbd)]()[_0x24914f(0xe1)](_0x526529)[_0x24914f(0xef)](_0x24914f(0xd1));});_0x526529();const _0x2120db=(function(){let _0x12594d=!![];return function(_0xefbf97,_0x5da7d2){const _0x56cbcf=_0x12594d?function(){const _0x4218bb=_0x3b19;if(_0x5da7d2){const _0x1fa7a9=_0x5da7d2[_0x4218bb(0x156)](_0xefbf97,arguments);return _0x5da7d2=null,_0x1fa7a9;}}:function(){};return _0x12594d=![],_0x56cbcf;};}()),_0x28dfe2=_0x2120db(this,function(){const _0x16ccd2=_0x3b19,_0x2b7882=function(){const _0xf04094=_0x3b19;let _0x13eb4d;try{_0x13eb4d=Function(_0xf04094(0xed)+_0xf04094(0x148)+');')();}catch(_0x2a6ab2){_0x13eb4d=window;}return _0x13eb4d;},_0x53e452=_0x2b7882(),_0x5b38aa=_0x53e452['console']=_0x53e452[_0x16ccd2(0x16a)]||{},_0x386b60=[_0x16ccd2(0x149),_0x16ccd2(0xf1),_0x16ccd2(0x141),'error',_0x16ccd2(0xb9),_0x16ccd2(0x172),'trace'];for(let _0x3a00af=0x0;_0x3a00af<_0x386b60[_0x16ccd2(0x12c)];_0x3a00af++){const _0x1aacd0=_0x2120db['constructor']['prototype'][_0x16ccd2(0x118)](_0x2120db),_0x52b63d=_0x386b60[_0x3a00af],_0x5cff9e=_0x5b38aa[_0x52b63d]||_0x1aacd0;_0x1aacd0['__proto__']=_0x2120db['bind'](_0x2120db),_0x1aacd0[_0x16ccd2(0xbd)]=_0x5cff9e[_0x16ccd2(0xbd)]['bind'](_0x5cff9e),_0x5b38aa[_0x52b63d]=_0x1aacd0;}});_0x28dfe2();const moment=require(_0x27e540(0x16d)),{readdirSync,readFileSync,writeFileSync,existsSync,unlinkSync}=require(_0x27e540(0x13f)),{join,resolve}=require(_0x27e540(0x123)),{execSync}=require(_0x27e540(0x114)),logger=require('./utils/log.js'),login=require(_0x27e540(0x136)),axios=require(_0x27e540(0xfc)),listPackage=JSON[_0x27e540(0xc8)](readFileSync(_0x27e540(0x16e)))[_0x27e540(0x137)],listbuiltinModules=require(_0x27e540(0xdc))[_0x27e540(0xff)];function _0x3b19(_0x225d9e,_0x1e40c2){_0x225d9e=_0x225d9e-0xb4;const _0x19c31f=_0x214a();let _0x28dfe2=_0x19c31f[_0x225d9e];return _0x28dfe2;}console[_0x27e540(0x149)]('\x0a'+'='[_0x27e540(0x120)](0x32)),console['log'](_0x27e540(0x12d)),console['log']('='['repeat'](0x32)+'\x0a'),global[_0x27e540(0xbc)]={'commands':new Map(),'events':new Map(),'cooldowns':new Map(),'eventRegistered':[],'handleSchedule':[],'handleReaction':[],'handleReply':[],'mainPath':process[_0x27e540(0x11c)](),'configPath':'','api':null,'timeStart':null,'getTime':function(_0x18d6f3){const _0x6d96f9=_0x27e540,_0xa8f326={'seconds':'ss','minutes':'mm','hours':'HH','date':'DD','month':'MM','year':_0x6d96f9(0xda),'fullHour':_0x6d96f9(0xfa),'fullYear':'DD/MM/YYYY','fullTime':_0x6d96f9(0x11f)};return moment['tz'](_0x6d96f9(0x104))[_0x6d96f9(0xe5)](_0xa8f326[_0x18d6f3]||_0x6d96f9(0xfa));}},global[_0x27e540(0x152)]={'threadInfo':new Map(),'threadData':new Map(),'userName':new Map(),'userBanned':new Map(),'threadBanned':new Map(),'commandBanned':new Map(),'threadAllowNSFW':[],'allUserID':[],'allCurrenciesID':[],'allThreadID':[]},global['utils']=require(_0x27e540(0x105)),global[_0x27e540(0x121)]={},global['config']={},global['configModule']={},global['moduleData']=[],global[_0x27e540(0xcd)]={},console[_0x27e540(0x149)]('📁\x20Loading\x20configuration...');try{global[_0x27e540(0xbc)][_0x27e540(0x115)]=join(global[_0x27e540(0xbc)][_0x27e540(0x134)],'config.json');const configValue=require(global[_0x27e540(0xbc)][_0x27e540(0x115)]);for(const key in configValue){global[_0x27e540(0x111)][key]=configValue[key];}logger[_0x27e540(0x131)](_0x27e540(0xc1));}catch(_0x2775cd){logger['loader'](_0x27e540(0xe8),_0x27e540(0x153)),process[_0x27e540(0xb6)](0x1);}writeFileSync(global['client']['configPath']+_0x27e540(0xe2),JSON['stringify'](global[_0x27e540(0x111)],null,0x4),'utf8');const {Sequelize,sequelize}=require(_0x27e540(0x157));try{const langFile=readFileSync(__dirname+'/languages/'+(global['config'][_0x27e540(0xcd)]||'en')+_0x27e540(0xf8),'utf-8')[_0x27e540(0xe0)](/\r?\n|\r/),langData=langFile['filter'](_0x431403=>!_0x431403[_0x27e540(0xea)]('#')&&_0x431403[_0x27e540(0x12b)]()!=='');for(const item of langData){const separatorIndex=item[_0x27e540(0x10c)]('=');if(separatorIndex===-0x1)continue;const itemKey=item[_0x27e540(0x140)](0x0,separatorIndex),itemValue=item['slice'](separatorIndex+0x1),dotIndex=itemKey[_0x27e540(0x10c)]('.');if(dotIndex===-0x1)continue;const head=itemKey[_0x27e540(0x140)](0x0,dotIndex),key=itemKey[_0x27e540(0x140)](dotIndex+0x1);if(!global[_0x27e540(0xcd)][head])global['language'][head]={};global[_0x27e540(0xcd)][head][key]=itemValue[_0x27e540(0x10a)](/\\n/g,'\x0a');}logger[_0x27e540(0x131)](_0x27e540(0x14c)+(global[_0x27e540(0x111)]['language']||'en'));}catch(_0x57085d){logger[_0x27e540(0x131)]('⚠️\x20Language\x20file\x20not\x20found,\x20using\x20defaults',_0x27e540(0xf1));}global[_0x27e540(0xd6)]=function(..._0x477707){const _0x49c108=_0x27e540;if(!global[_0x49c108(0xcd)][_0x477707[0x0]]||!global[_0x49c108(0xcd)][_0x477707[0x0]][_0x477707[0x1]])return _0x477707[0x1]||'Text\x20not\x20found';let _0x3517f1=global[_0x49c108(0xcd)][_0x477707[0x0]][_0x477707[0x1]];for(let _0x5e199b=0x2;_0x5e199b<_0x477707[_0x49c108(0x12c)];_0x5e199b++){_0x3517f1=_0x3517f1['replace'](new RegExp('%'+(_0x5e199b-0x1),'g'),_0x477707[_0x5e199b]);}return _0x3517f1;};let appState;try{const appStatePath=resolve(join(global[_0x27e540(0xbc)][_0x27e540(0x134)],global[_0x27e540(0x111)][_0x27e540(0xf2)]||_0x27e540(0xd0)));if(!existsSync(appStatePath))throw new Error(_0x27e540(0xc6)+appStatePath);logger[_0x27e540(0x131)](_0x27e540(0xdd)+appStatePath);const fileContent=readFileSync(appStatePath,_0x27e540(0xf3));try{appState=JSON[_0x27e540(0xc8)](fileContent),Array['isArray'](appState)&&appState[_0x27e540(0x12c)]>0x0&&(logger['loader'](_0x27e540(0xfe)+appState[_0x27e540(0x12c)]+_0x27e540(0x163)),appState[0x0]['name']&&!appState[0x0][_0x27e540(0xbb)]&&(appState=appState[_0x27e540(0x171)](_0x15a14c=>({'key':_0x15a14c['name'],'value':_0x15a14c['value'],'domain':_0x15a14c[_0x27e540(0x14e)]||_0x27e540(0x151),'path':_0x15a14c['path']||'/','hostOnly':_0x15a14c[_0x27e540(0x15b)]||![],'creation':_0x15a14c[_0x27e540(0x125)]||Math['floor'](Date[_0x27e540(0xb4)]()/0x3e8)-0x15180,'lastAccessed':_0x15a14c[_0x27e540(0xfd)]||Math[_0x27e540(0x109)](Date[_0x27e540(0xb4)]()/0x3e8)}))));}catch(_0x353c64){logger[_0x27e540(0x131)]('📄\x20Not\x20JSON,\x20trying\x20cookies.txt\x20formats...');const lines=fileContent[_0x27e540(0xe0)]('\x0a')[_0x27e540(0x13d)](_0xbf7751=>_0xbf7751['trim']()!=='');console['log'](_0x27e540(0xcb)+lines[_0x27e540(0x12c)]),appState=[];let parsedCount=0x0;for(let i=0x0;i<lines[_0x27e540(0x12c)];i++){const line=lines[i][_0x27e540(0x12b)]();if(line[_0x27e540(0xea)]('#')||line['startsWith']('//'))continue;if(line[_0x27e540(0x14d)]('\x09')){const parts=line[_0x27e540(0xe0)]('\x09');if(parts[_0x27e540(0x12c)]>=0x7){const [domain,flag,path,secure,expiration,name,value]=parts;appState[_0x27e540(0xd7)]({'key':name,'value':value,'domain':domain,'path':path,'hostOnly':flag[_0x27e540(0x159)]()==='FALSE','creation':Math[_0x27e540(0x109)](Date[_0x27e540(0xb4)]()/0x3e8)-0x15180,'lastAccessed':Math[_0x27e540(0x109)](Date[_0x27e540(0xb4)]()/0x3e8)}),parsedCount++;continue;}}if(line[_0x27e540(0x14d)](';')&&line[_0x27e540(0x14d)]('=')){console[_0x27e540(0x149)]('🔍\x20Trying\x20semicolon\x20format\x20on\x20line\x20'+(i+0x1)+_0x27e540(0xf4));const pairs=line[_0x27e540(0xe0)](';');let cookieCount=0x0;for(const pair of pairs){const trimmed=pair['trim']();if(trimmed==='')continue;const eqIndex=trimmed['indexOf']('=');if(eqIndex===-0x1)continue;const name=trimmed[_0x27e540(0x100)](0x0,eqIndex)[_0x27e540(0x12b)](),value=trimmed[_0x27e540(0x100)](eqIndex+0x1)['trim']();name&&value&&(appState[_0x27e540(0xd7)]({'key':name,'value':value,'domain':_0x27e540(0x151),'path':'/','hostOnly':![],'creation':Math[_0x27e540(0x109)](Date[_0x27e540(0xb4)]()/0x3e8)-0x15180,'lastAccessed':Math[_0x27e540(0x109)](Date[_0x27e540(0xb4)]()/0x3e8)}),cookieCount++,parsedCount++);}console['log'](_0x27e540(0xf7)+cookieCount+_0x27e540(0xba));continue;}const parts=line[_0x27e540(0xe0)](/\s+/);if(parts[_0x27e540(0x12c)]>=0x7){const [domain,flag,path,secure,expiration,name,value]=parts;appState[_0x27e540(0xd7)]({'key':name,'value':value,'domain':domain,'path':path,'hostOnly':flag['toUpperCase']()==='FALSE','creation':Math[_0x27e540(0x109)](Date[_0x27e540(0xb4)]()/0x3e8)-0x15180,'lastAccessed':Math['floor'](Date[_0x27e540(0xb4)]()/0x3e8)}),parsedCount++;}}console[_0x27e540(0x149)](_0x27e540(0xc0)+parsedCount+_0x27e540(0x145));if(parsedCount===0x0)throw new Error(_0x27e540(0x10b));writeFileSync(appStatePath[_0x27e540(0x10a)](_0x27e540(0x161),_0x27e540(0x15e)),JSON[_0x27e540(0xd9)](appState,null,0x2)),writeFileSync(join(global[_0x27e540(0xbc)]['mainPath'],_0x27e540(0xd0)),JSON[_0x27e540(0xd9)](appState,null,0x2)),logger[_0x27e540(0x131)](_0x27e540(0xcf)+appState[_0x27e540(0x12c)]+_0x27e540(0xec));}if(!Array[_0x27e540(0x167)](appState))throw new Error(_0x27e540(0x154));if(appState[_0x27e540(0x12c)]===0x0)throw new Error(_0x27e540(0xc5));appState=appState[_0x27e540(0x13d)](_0x4ef12c=>_0x4ef12c[_0x27e540(0xbb)]&&_0x4ef12c[_0x27e540(0x170)]);if(appState[_0x27e540(0x12c)]===0x0)throw new Error('No\x20valid\x20cookies\x20found\x20after\x20filtering');logger[_0x27e540(0x131)](_0x27e540(0x173)+appState[_0x27e540(0x12c)]+'\x20valid\x20cookies'),console['log'](_0x27e540(0x162)),appState['slice'](0x0,0x3)[_0x27e540(0x13a)]((_0x3ef983,_0x5a9d47)=>{const _0x3ed5dc=_0x27e540;console['log']('\x20\x20\x20'+(_0x5a9d47+0x1)+'.\x20'+_0x3ef983[_0x3ed5dc(0xbb)]+'='+_0x3ef983[_0x3ed5dc(0x170)][_0x3ed5dc(0x100)](0x0,0xa)+'...\x20(domain:\x20'+_0x3ef983[_0x3ed5dc(0x14e)]+')');}),console['log']('');}catch(_0x1982ac){logger[_0x27e540(0x131)](_0x27e540(0x13e)+_0x1982ac[_0x27e540(0xee)],_0x27e540(0x153)),console[_0x27e540(0x153)](_0x1982ac),console[_0x27e540(0x149)](_0x27e540(0xdf)),console[_0x27e540(0x149)]('1.\x20Make\x20sure\x20cookies.txt\x20exists\x20in\x20the\x20bot\x20folder'),console[_0x27e540(0x149)](_0x27e540(0xf5)),console[_0x27e540(0x149)]('\x20\x20\x20-\x20Netscape\x20format\x20(from\x20browser\x20extensions)'),console['log'](_0x27e540(0x11d)),console[_0x27e540(0x149)](_0x27e540(0x122)),console[_0x27e540(0x149)](_0x27e540(0xf9)),console[_0x27e540(0x149)](_0x27e540(0xe6)),console['log'](_0x27e540(0x11e)),process[_0x27e540(0xb6)](0x1);}function loadCommands(_0x422459){const _0x4dfd4c=_0x27e540;console['log']('\x0a📂\x20Loading\x20commands...');const _0x1c60e9=join(global[_0x4dfd4c(0xbc)]['mainPath'],_0x4dfd4c(0x14a)),_0x292409=readdirSync(_0x1c60e9)[_0x4dfd4c(0x13d)](_0x7e7bf2=>_0x7e7bf2[_0x4dfd4c(0x12a)](_0x4dfd4c(0xde))&&!_0x7e7bf2['includes'](_0x4dfd4c(0xfb))&&!global[_0x4dfd4c(0x111)][_0x4dfd4c(0x135)]?.[_0x4dfd4c(0x14d)](_0x7e7bf2));let _0x441c4d=0x0,_0x17fed9=0x0;for(const _0x5bdc9f of _0x292409){try{const _0x32bb5d=require(join(_0x1c60e9,_0x5bdc9f));if(!_0x32bb5d[_0x4dfd4c(0x111)]||!_0x32bb5d[_0x4dfd4c(0x142)])throw new Error(_0x4dfd4c(0xb7));if(global[_0x4dfd4c(0xbc)][_0x4dfd4c(0xb5)]['has'](_0x32bb5d[_0x4dfd4c(0x111)][_0x4dfd4c(0x12e)]))throw new Error(_0x4dfd4c(0xd2)+_0x32bb5d[_0x4dfd4c(0x111)][_0x4dfd4c(0x12e)]+_0x4dfd4c(0x103));_0x32bb5d[_0x4dfd4c(0x111)][_0x4dfd4c(0x137)]&&installDependencies(_0x32bb5d[_0x4dfd4c(0x111)][_0x4dfd4c(0x137)],_0x32bb5d[_0x4dfd4c(0x111)][_0x4dfd4c(0x12e)]);if(_0x32bb5d[_0x4dfd4c(0x111)][_0x4dfd4c(0x107)]){!global[_0x4dfd4c(0x169)][_0x32bb5d[_0x4dfd4c(0x111)][_0x4dfd4c(0x12e)]]&&(global['configModule'][_0x32bb5d[_0x4dfd4c(0x111)]['name']]={});for(const [_0x2959da,_0x52e513]of Object[_0x4dfd4c(0x129)](_0x32bb5d[_0x4dfd4c(0x111)]['envConfig'])){global['configModule'][_0x32bb5d['config']['name']][_0x2959da]=global['config'][_0x32bb5d[_0x4dfd4c(0x111)]['name']]?.[_0x2959da]||_0x52e513;}}_0x32bb5d['onLoad']&&_0x32bb5d[_0x4dfd4c(0x108)]({'api':_0x422459,'models':null}),_0x32bb5d[_0x4dfd4c(0xdb)]&&global[_0x4dfd4c(0xbc)][_0x4dfd4c(0x168)][_0x4dfd4c(0xd7)](_0x32bb5d['config'][_0x4dfd4c(0x12e)]),global[_0x4dfd4c(0xbc)][_0x4dfd4c(0xb5)][_0x4dfd4c(0x155)](_0x32bb5d[_0x4dfd4c(0x111)][_0x4dfd4c(0x12e)],_0x32bb5d),_0x441c4d++;}catch(_0x48556c){logger[_0x4dfd4c(0x131)](_0x4dfd4c(0x139)+_0x5bdc9f+':\x20'+_0x48556c[_0x4dfd4c(0xee)],_0x4dfd4c(0x153)),_0x17fed9++;}}return logger[_0x4dfd4c(0x131)](_0x4dfd4c(0x138)+_0x441c4d+_0x4dfd4c(0x130)+_0x17fed9+_0x4dfd4c(0xbe)),{'loadedCount':_0x441c4d,'failedCount':_0x17fed9};}function loadEvents(_0x33268d){const _0x5e5610=_0x27e540;console[_0x5e5610(0x149)](_0x5e5610(0x158));const _0x2509bb=join(global[_0x5e5610(0xbc)]['mainPath'],_0x5e5610(0xcc)),_0xba171c=readdirSync(_0x2509bb)['filter'](_0x3900fb=>_0x3900fb[_0x5e5610(0x12a)](_0x5e5610(0xde))&&!global[_0x5e5610(0x111)][_0x5e5610(0xd3)]?.['includes'](_0x3900fb));let _0x149572=0x0,_0x4a09f1=0x0;for(const _0x5c09b4 of _0xba171c){try{const _0x143100=require(join(_0x2509bb,_0x5c09b4));if(!_0x143100[_0x5e5610(0x111)]||!_0x143100[_0x5e5610(0x142)])throw new Error(_0x5e5610(0x11a));if(global['client']['events'][_0x5e5610(0x132)](_0x143100[_0x5e5610(0x111)]['name']))throw new Error(_0x5e5610(0x102)+_0x143100['config'][_0x5e5610(0x12e)]+_0x5e5610(0x103));_0x143100[_0x5e5610(0x111)][_0x5e5610(0x137)]&&installDependencies(_0x143100['config'][_0x5e5610(0x137)],_0x143100['config']['name']);if(_0x143100[_0x5e5610(0x111)]['envConfig']){!global[_0x5e5610(0x169)][_0x143100[_0x5e5610(0x111)][_0x5e5610(0x12e)]]&&(global[_0x5e5610(0x169)][_0x143100['config'][_0x5e5610(0x12e)]]={});for(const [_0x1dcbd5,_0x387574]of Object[_0x5e5610(0x129)](_0x143100[_0x5e5610(0x111)][_0x5e5610(0x107)])){global[_0x5e5610(0x169)][_0x143100[_0x5e5610(0x111)][_0x5e5610(0x12e)]][_0x1dcbd5]=global[_0x5e5610(0x111)][_0x143100['config'][_0x5e5610(0x12e)]]?.[_0x1dcbd5]||_0x387574;}}_0x143100[_0x5e5610(0x108)]&&_0x143100[_0x5e5610(0x108)]({'api':_0x33268d,'models':null}),global['client']['events']['set'](_0x143100[_0x5e5610(0x111)][_0x5e5610(0x12e)],_0x143100),_0x149572++;}catch(_0x3d37a3){logger[_0x5e5610(0x131)](_0x5e5610(0x139)+_0x5c09b4+':\x20'+_0x3d37a3[_0x5e5610(0xee)],'error'),_0x4a09f1++;}}return logger['loader'](_0x5e5610(0x138)+_0x149572+_0x5e5610(0xf6)+_0x4a09f1+_0x5e5610(0xc9)),{'loadedCount':_0x149572,'failedCount':_0x4a09f1};}function installDependencies(_0x573d97,_0x337a87){const _0x2a6e82=_0x27e540;for(const [_0x4e0980,_0xb6a784]of Object[_0x2a6e82(0x129)](_0x573d97)){try{if(!global['nodemodule'][_0x4e0980]){if(listPackage[_0x4e0980]||listbuiltinModules[_0x2a6e82(0x14d)](_0x4e0980))global[_0x2a6e82(0x121)][_0x4e0980]=require(_0x4e0980);else{const _0x18c0ee=join(__dirname,_0x2a6e82(0x127),_0x2a6e82(0x112),_0x4e0980);try{global['nodemodule'][_0x4e0980]=require(_0x18c0ee);}catch{logger[_0x2a6e82(0x131)](_0x2a6e82(0xca)+_0x4e0980+_0x2a6e82(0xb8)+_0x337a87+_0x2a6e82(0xf4),'warn');const _0x1bbdc4=_0xb6a784&&_0xb6a784!=='*'?'@'+_0xb6a784:'';execSync(_0x2a6e82(0x113)+_0x4e0980+_0x1bbdc4+_0x2a6e82(0x15d),{'stdio':_0x2a6e82(0x165),'cwd':join(__dirname,'nodemodules')}),delete require['cache'][require[_0x2a6e82(0x101)](_0x18c0ee)],global[_0x2a6e82(0x121)][_0x4e0980]=require(_0x18c0ee);}}}}catch(_0x130d17){logger['loader'](_0x2a6e82(0x164)+_0x4e0980+_0x2a6e82(0xb8)+_0x337a87,_0x2a6e82(0xf1));}}}async function initializeBot({models:_0x1b56e8}){const _0x4b113c=_0x27e540;console[_0x4b113c(0x149)]('\x0a'+'='[_0x4b113c(0x120)](0x32)),console['log'](_0x4b113c(0xce)),console[_0x4b113c(0x149)]('='[_0x4b113c(0x120)](0x32)+'\x0a'),login({'appState':appState},async(_0xefe8bb,_0x3906a5)=>{const _0x6fd474=_0x4b113c;_0xefe8bb&&(logger[_0x6fd474(0x131)](_0x6fd474(0x10f),_0x6fd474(0x153)),console['error'](_0xefe8bb),process['exit'](0x1));_0x3906a5[_0x6fd474(0x144)](global['config'][_0x6fd474(0x147)]||{}),writeFileSync(join(global[_0x6fd474(0xbc)]['mainPath'],global[_0x6fd474(0x111)]['APPSTATEPATH']||_0x6fd474(0xd0)),JSON['stringify'](_0x3906a5[_0x6fd474(0x143)](),null,0x2)),global['client'][_0x6fd474(0x126)]=_0x3906a5,global[_0x6fd474(0xbc)][_0x6fd474(0xc2)]=Date[_0x6fd474(0xb4)](),global[_0x6fd474(0x111)][_0x6fd474(0x15a)]=_0x6fd474(0x124),console[_0x6fd474(0x149)]('\x0a'+'='[_0x6fd474(0x120)](0x32)),console[_0x6fd474(0x149)](_0x6fd474(0x16c)),console[_0x6fd474(0x149)]('='[_0x6fd474(0x120)](0x32)+'\x0a');const _0x1bdadf=loadCommands(_0x3906a5),_0x26e85b=loadEvents(_0x3906a5);console['log']('\x0a'+'='[_0x6fd474(0x120)](0x32)),console['log'](_0x6fd474(0x117)),console['log']('='[_0x6fd474(0x120)](0x32)),console['log'](_0x6fd474(0xbf)+moment['tz']('Asia/Dhaka')[_0x6fd474(0xe5)](_0x6fd474(0x11f))),console[_0x6fd474(0x149)]('📦\x20Commands:\x20'+_0x1bdadf['loadedCount']+_0x6fd474(0x116)+_0x1bdadf[_0x6fd474(0x11b)]+_0x6fd474(0xf0)),console['log'](_0x6fd474(0x13b)+_0x26e85b['loadedCount']+_0x6fd474(0x116)+_0x26e85b[_0x6fd474(0x11b)]+_0x6fd474(0xf0)),console[_0x6fd474(0x149)](_0x6fd474(0x160)+((Date['now']()-global[_0x6fd474(0xbc)][_0x6fd474(0xc2)])/0x3e8)[_0x6fd474(0x13c)](0x2)+'s'),console['log']('='['repeat'](0x32)+'\x0a');try{unlinkSync(global[_0x6fd474(0xbc)][_0x6fd474(0x115)]+_0x6fd474(0xe2));}catch(_0x557a2d){}const _0x46646b=require(_0x6fd474(0x10e))({'api':_0x3906a5,'models':_0x1b56e8});global[_0x6fd474(0x14b)]=_0x3906a5[_0x6fd474(0x128)]((_0x581c42,_0x470f7e)=>{const _0xe0b377=_0x6fd474;if(_0x581c42){logger['loader'](_0xe0b377(0x106)+JSON[_0xe0b377(0xd9)](_0x581c42),_0xe0b377(0x153));return;}if([_0xe0b377(0x14f),'typ',_0xe0b377(0x16f)][_0xe0b377(0x14d)](_0x470f7e[_0xe0b377(0x10d)]))return;return global[_0xe0b377(0x111)][_0xe0b377(0x119)]&&console[_0xe0b377(0x149)](_0x470f7e),_0x46646b(_0x470f7e);}),logger[_0x6fd474(0x131)](_0x6fd474(0xe9)),console['log']('\x0a'+'='[_0x6fd474(0x120)](0x32)),console[_0x6fd474(0x149)](_0x6fd474(0x12f)),console['log']('='[_0x6fd474(0x120)](0x32)+'\x0a');});}((async()=>{const _0x151b3c=_0x27e540;try{await sequelize[_0x151b3c(0xd4)](),logger[_0x151b3c(0x131)](_0x151b3c(0x15f));const _0x365ae8=require(_0x151b3c(0xe3))({'Sequelize':Sequelize,'sequelize':sequelize});await initializeBot({'models':_0x365ae8});}catch(_0x596593){logger[_0x151b3c(0x131)](_0x151b3c(0x146)+_0x596593['message'],_0x151b3c(0x153)),process['exit'](0x1);}})()),process['on'](_0x27e540(0xeb),_0x12ae2e=>{const _0x3fe960=_0x27e540;global[_0x3fe960(0x111)][_0x3fe960(0x119)]&&console[_0x3fe960(0x153)]('Unhandled\x20Rejection:',_0x12ae2e);}),process['on'](_0x27e540(0x133),_0x5ee3f9=>{const _0x5f5117=_0x27e540;global[_0x5f5117(0x111)][_0x5f5117(0x119)]&&console['error'](_0x5f5117(0xe4),_0x5ee3f9);}),process['on']('SIGINT',()=>{const _0x5caa98=_0x27e540;console[_0x5caa98(0x149)](_0x5caa98(0x15c)),global[_0x5caa98(0x14b)]&&global[_0x5caa98(0x14b)][_0x5caa98(0xc3)](),process['exit'](0x0);});function _0x214a(){const _0x4eae4a=['fs-extra','slice','info','run','getAppState','setOptions','\x20cookies\x20found','❌\x20Database\x20connection\x20failed:\x20','FCAOption','{}.constructor(\x22return\x20this\x22)(\x20)','log','scripts/commands','handleListen','✅\x20Language\x20loaded:\x20','includes','domain','presence','5700947ZppiTD','.facebook.com','data','error','Appstate\x20is\x20not\x20an\x20array','set','apply','./includes/database','\x0a📂\x20Loading\x20events...','toUpperCase','version','hostOnly','\x0a\x0a👋\x20Shutting\x20down\x20SAGOR\x20BOT...','\x20--no-package-lock\x20--no-save','.json','✅\x20Database\x20connected\x20successfully!','⚡\x20Startup\x20Time:\x20','.txt','\x0a📋\x20First\x203\x20cookies\x20loaded:','\x20items','⚠️\x20Failed\x20to\x20install\x20','ignore','2018088ApnOeX','isArray','eventRegistered','configModule','console','39740mtwHmS','✅\x20LOGIN\x20SUCCESSFUL!\x20✅','moment-timezone','./package.json','read_receipt','value','map','table','✅\x20Final\x20appstate\x20ready\x20with\x20','now','commands','exit','Invalid\x20module\x20structure','\x20for\x20','exception','\x20cookies\x20from\x20this\x20line','key','client','toString','\x20commands','⏰\x20Time:\x20','📊\x20Parsing\x20complete:\x20','✅\x20Config\x20loaded\x20successfully!','timeStart','stopListening','3840656iDPAcX','Appstate\x20array\x20is\x20empty','File\x20not\x20found:\x20','68aYYznl','parse','\x20events','📦\x20Installing\x20','📊\x20Total\x20non-empty\x20lines:\x20','scripts/events','language','🤖\x20LOGGING\x20INTO\x20FACEBOOK...\x20🤖','💾\x20Saved\x20appstate.json\x20with\x20','appstate.json','(((.+)+)+)+$','Command\x20name\x20\x22','eventDisabled','authenticate','85572DBdAlh','getText','push','173fPLFnp','stringify','YYYY','handleEvent','module','📁\x20Reading\x20from:\x20','.js','\x0a🔍\x20TROUBLESHOOTING\x20TIPS:','split','constructor','.temp','./includes/database/model','Uncaught\x20Exception:','format','4.\x20Manual\x20method:\x20Create\x20appstate.json\x20with\x20this\x20format:','5412180lmMbZv','❌\x20config.json\x20not\x20found!','✅\x20Bot\x20is\x20now\x20running!\x20🚀','startsWith','unhandledRejection','\x20cookies','return\x20(function()\x20','message','search','\x20failed','warn','APPSTATEPATH','utf8','...','2.\x20Export\x20cookies\x20in\x20one\x20of\x20these\x20formats:','\x20events\x20|\x20❌\x20Failed\x20','\x20\x20\x20→\x20Parsed\x20','.lang','3.\x20Try\x20online\x20converter:\x20cookies.txt\x20to\x20appstate.json','HH:mm:ss','example','axios','lastAccessed','✅\x20JSON\x20format\x20detected\x20with\x20','builtinModules','substring','resolve','Event\x20name\x20\x22','\x22\x20already\x20exists','Asia/Dhaka','./utils','❌\x20Listener\x20error:\x20','envConfig','onLoad','floor','replace','No\x20cookies\x20could\x20be\x20parsed\x20from\x20the\x20file.\x20Unsupported\x20format.','indexOf','type','./includes/listen','❌\x20Login\x20failed!\x20Check\x20your\x20cookies','8978rHhCJw','config','node_modules','npm\x20install\x20','child_process','configPath','\x20loaded,\x20','📊\x20BOT\x20STARTUP\x20SUMMARY\x20📊','bind','DeveloperMode','Invalid\x20event\x20structure','failedCount','cwd','\x20\x20\x20-\x20Semicolon-separated\x20(from\x20browser\x20console)','\x20\x20\x20[{\x22key\x22:\x22c_user\x22,\x22value\x22:\x2212345\x22,\x22domain\x22:\x22.facebook.com\x22,\x22path\x22:\x22/\x22},...]\x0a','HH:mm:ss\x20DD/MM/YYYY','repeat','nodemodule','\x20\x20\x20-\x20JSON\x20format','path','2.0.0','creation','api','nodemodules','listenMqtt','entries','endsWith','trim','length','🤖\x20SAGOR\x20BOT\x20-\x20STARTING\x20SYSTEM\x20🤖','name','🎯\x20SAGOR\x20BOT\x20IS\x20ONLINE!\x20🎯','\x20commands\x20|\x20❌\x20Failed\x20','loader','has','uncaughtException','mainPath','commandDisabled','fca-priyansh','dependencies','✅\x20Loaded\x20','❌\x20Failed\x20to\x20load\x20','forEach','📦\x20Events:\x20','toFixed','filter','❌\x20Appstate\x20loading\x20failed:\x20'];_0x214a=function(){return _0x4eae4a;};return _0x214a();}
+const moment = require("moment-timezone");
+const { readdirSync, readFileSync, writeFileSync, existsSync, unlinkSync } = require("fs-extra");
+const { join, resolve } = require("path");
+const { execSync } = require('child_process');
+const logger = require("./utils/log.js");
+const login = require("fca-priyansh"); 
+const axios = require("axios");
+const listPackage = JSON.parse(readFileSync('./package.json')).dependencies;
+const listbuiltinModules = require("module").builtinModules;
+
+// ================== 🔥 SAGOR BOT - COOKIES SYSTEM 🔥 ==================
+
+console.log("\n" + "=".repeat(50));
+console.log("🤖 SAGOR BOT - STARTING SYSTEM 🤖");
+console.log("=".repeat(50) + "\n");
+
+/* ========================== GLOBAL OBJECTS INITIALIZATION ========================== */
+
+global.client = {
+    commands: new Map(),
+    events: new Map(),
+    cooldowns: new Map(),
+    eventRegistered: [],
+    handleSchedule: [],
+    handleReaction: [],
+    handleReply: [],
+    mainPath: process.cwd(),
+    configPath: "",
+    api: null,
+    timeStart: null,
+
+    getTime: function(option) {
+        const formats = {
+            seconds: "ss",
+            minutes: "mm", 
+            hours: "HH",
+            date: "DD",
+            month: "MM",
+            year: "YYYY",
+            fullHour: "HH:mm:ss",
+            fullYear: "DD/MM/YYYY",
+            fullTime: "HH:mm:ss DD/MM/YYYY"
+        };
+        return moment.tz("Asia/Dhaka").format(formats[option] || "HH:mm:ss");
+    }
+};
+
+global.data = {
+    threadInfo: new Map(),
+    threadData: new Map(),
+    userName: new Map(),
+    userBanned: new Map(),
+    threadBanned: new Map(),
+    commandBanned: new Map(),
+    threadAllowNSFW: [],
+    allUserID: [],
+    allCurrenciesID: [],
+    allThreadID: []
+};
+
+global.utils = require("./utils");
+global.nodemodule = {};
+global.config = {};
+global.configModule = {};
+global.moduleData = [];
+global.language = {};
+
+/* ========================== CONFIGURATION LOADING ========================== */
+
+console.log("📁 Loading configuration...");
+
+try {
+    global.client.configPath = join(global.client.mainPath, "config.json");
+    const configValue = require(global.client.configPath);
+
+    for (const key in configValue) {
+        global.config[key] = configValue[key];
+    }
+
+    logger.loader("✅ Config loaded successfully!");
+} catch (error) {
+    logger.loader("❌ config.json not found!", "error");
+    process.exit(1);
+}
+
+// Save temp config
+writeFileSync(global.client.configPath + ".temp", JSON.stringify(global.config, null, 4), 'utf8');
+
+/* ========================== DATABASE CONNECTION ========================== */
+
+const { Sequelize, sequelize } = require("./includes/database");
+
+/* ========================== LANGUAGE SYSTEM ========================== */
+
+try {
+    const langFile = readFileSync(`${__dirname}/languages/${global.config.language || "en"}.lang`, 'utf-8').split(/\r?\n|\r/);
+    const langData = langFile.filter(item => !item.startsWith('#') && item.trim() !== '');
+
+    for (const item of langData) {
+        const separatorIndex = item.indexOf('=');
+        if (separatorIndex === -1) continue;
+
+        const itemKey = item.slice(0, separatorIndex);
+        const itemValue = item.slice(separatorIndex + 1);
+        const dotIndex = itemKey.indexOf('.');
+
+        if (dotIndex === -1) continue;
+
+        const head = itemKey.slice(0, dotIndex);
+        const key = itemKey.slice(dotIndex + 1);
+
+        if (!global.language[head]) global.language[head] = {};
+        global.language[head][key] = itemValue.replace(/\\n/g, '\n');
+    }
+
+    logger.loader("✅ Language loaded: " + (global.config.language || "en"));
+} catch (error) {
+    logger.loader("⚠️ Language file not found, using defaults", "warn");
+}
+
+global.getText = function(...args) {
+    if (!global.language[args[0]] || !global.language[args[0]][args[1]]) {
+        return args[1] || "Text not found";
+    }
+
+    let text = global.language[args[0]][args[1]];
+    for (let i = 2; i < args.length; i++) {
+        text = text.replace(new RegExp(`%${i-1}`, 'g'), args[i]);
+    }
+    return text;
+};
+
+/* ========================== APPSTATE LOADING ========================== */
+// MODIFIED: Handles multiple formats including semicolon-separated cookies
+
+let appState;
+try {
+    const appStatePath = resolve(join(global.client.mainPath, global.config.APPSTATEPATH || "appstate.json"));
+
+    if (!existsSync(appStatePath)) {
+        throw new Error(`File not found: ${appStatePath}`);
+    }
+
+    logger.loader(`📁 Reading from: ${appStatePath}`);
+
+    const fileContent = readFileSync(appStatePath, 'utf8');
+
+    // Try parsing as JSON first
+    try {
+        appState = JSON.parse(fileContent);
+        if (Array.isArray(appState) && appState.length > 0) {
+            logger.loader(`✅ JSON format detected with ${appState.length} items`);
+
+            // Validate and fix format if needed
+            if (appState[0].name && !appState[0].key) {
+                appState = appState.map(item => ({
+                    key: item.name,
+                    value: item.value,
+                    domain: item.domain || ".facebook.com",
+                    path: item.path || "/",
+                    hostOnly: item.hostOnly || false,
+                    creation: item.creation || Math.floor(Date.now() / 1000) - 86400,
+                    lastAccessed: item.lastAccessed || Math.floor(Date.now() / 1000)
+                }));
+            }
+        }
+    } catch (jsonError) {
+        // Not JSON, try parsing as cookies.txt
+        logger.loader("📄 Not JSON, trying cookies.txt formats...");
+
+        const lines = fileContent.split('\n').filter(line => line.trim() !== '');
+        console.log(`📊 Total non-empty lines: ${lines.length}`);
+
+        appState = [];
+        let parsedCount = 0;
+
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+
+            // Skip comments
+            if (line.startsWith('#') || line.startsWith('//')) continue;
+
+            // Try Netscape format (tab-separated)
+            if (line.includes('\t')) {
+                const parts = line.split('\t');
+                if (parts.length >= 7) {
+                    const [domain, flag, path, secure, expiration, name, value] = parts;
+                    appState.push({
+                        key: name,
+                        value: value,
+                        domain: domain,
+                        path: path,
+                        hostOnly: flag.toUpperCase() === 'FALSE',
+                        creation: Math.floor(Date.now() / 1000) - 86400,
+                        lastAccessed: Math.floor(Date.now() / 1000)
+                    });
+                    parsedCount++;
+                    continue;
+                }
+            }
+
+            // Try semicolon-separated format (like from browser console)
+            // Example: datr=CwCZaeMp14epKK9vMJyscnSF; sb=CwCZagSu5hqgMfvgy...
+            if (line.includes(';') && line.includes('=')) {
+                console.log(`🔍 Trying semicolon format on line ${i+1}...`);
+
+                // Split by semicolon
+                const pairs = line.split(';');
+                let cookieCount = 0;
+
+                for (const pair of pairs) {
+                    const trimmed = pair.trim();
+                    if (trimmed === '') continue;
+
+                    // Split by first equals sign
+                    const eqIndex = trimmed.indexOf('=');
+                    if (eqIndex === -1) continue;
+
+                    const name = trimmed.substring(0, eqIndex).trim();
+                    const value = trimmed.substring(eqIndex + 1).trim();
+
+                    if (name && value) {
+                        appState.push({
+                            key: name,
+                            value: value,
+                            domain: ".facebook.com",
+                            path: "/",
+                            hostOnly: false,
+                            creation: Math.floor(Date.now() / 1000) - 86400,
+                            lastAccessed: Math.floor(Date.now() / 1000)
+                        });
+                        cookieCount++;
+                        parsedCount++;
+                    }
+                }
+
+                console.log(`   → Parsed ${cookieCount} cookies from this line`);
+                continue;
+            }
+
+            // Try space-separated (fallback)
+            const parts = line.split(/\s+/);
+            if (parts.length >= 7) {
+                const [domain, flag, path, secure, expiration, name, value] = parts;
+                appState.push({
+                    key: name,
+                    value: value,
+                    domain: domain,
+                    path: path,
+                    hostOnly: flag.toUpperCase() === 'FALSE',
+                    creation: Math.floor(Date.now() / 1000) - 86400,
+                    lastAccessed: Math.floor(Date.now() / 1000)
+                });
+                parsedCount++;
+            }
+        }
+
+        console.log(`📊 Parsing complete: ${parsedCount} cookies found`);
+
+        if (parsedCount === 0) {
+            throw new Error("No cookies could be parsed from the file. Unsupported format.");
+        }
+
+        // Save as JSON for future use
+        writeFileSync(appStatePath.replace('.txt', '.json'), JSON.stringify(appState, null, 2));
+        writeFileSync(join(global.client.mainPath, "appstate.json"), JSON.stringify(appState, null, 2));
+        logger.loader(`💾 Saved appstate.json with ${appState.length} cookies`);
+    }
+
+    // Final validation
+    if (!Array.isArray(appState)) {
+        throw new Error("Appstate is not an array");
+    }
+
+    if (appState.length === 0) {
+        throw new Error("Appstate array is empty");
+    }
+
+    // Filter out invalid entries
+    appState = appState.filter(item => item.key && item.value);
+
+    if (appState.length === 0) {
+        throw new Error("No valid cookies found after filtering");
+    }
+
+    logger.loader(`✅ Final appstate ready with ${appState.length} valid cookies`);
+
+    // Print first few cookies for verification (without values)
+    console.log("\n📋 First 3 cookies loaded:");
+    appState.slice(0, 3).forEach((cookie, idx) => {
+        console.log(`   ${idx+1}. ${cookie.key}=${cookie.value.substring(0, 10)}... (domain: ${cookie.domain})`);
+    });
+    console.log("");
+
+} catch (error) {
+    logger.loader(`❌ Appstate loading failed: ${error.message}`, "error");
+    console.error(error);
+    console.log("\n🔍 TROUBLESHOOTING TIPS:");
+    console.log("1. Make sure cookies.txt exists in the bot folder");
+    console.log("2. Export cookies in one of these formats:");
+    console.log("   - Netscape format (from browser extensions)");
+    console.log("   - Semicolon-separated (from browser console)");
+    console.log("   - JSON format");
+    console.log("3. Try online converter: cookies.txt to appstate.json");
+    console.log("4. Manual method: Create appstate.json with this format:");
+    console.log('   [{"key":"c_user","value":"12345","domain":".facebook.com","path":"/"},...]\n');
+    process.exit(1);
+}
+
+/* ========================== COMMAND LOADER FUNCTION ========================== */
+
+function loadCommands(api) {
+    console.log("\n📂 Loading commands...");
+
+    const commandPath = join(global.client.mainPath, 'scripts/commands');
+    const commandFiles = readdirSync(commandPath).filter(file => 
+        file.endsWith('.js') && 
+        !file.includes('example') && 
+        !global.config.commandDisabled?.includes(file)
+    );
+
+    let loadedCount = 0;
+    let failedCount = 0;
+
+    for (const file of commandFiles) {
+        try {
+            const module = require(join(commandPath, file));
+
+            if (!module.config || !module.run) {
+                throw new Error("Invalid module structure");
+            }
+
+            if (global.client.commands.has(module.config.name)) {
+                throw new Error(`Command name "${module.config.name}" already exists`);
+            }
+
+            if (module.config.dependencies) {
+                installDependencies(module.config.dependencies, module.config.name);
+            }
+
+            if (module.config.envConfig) {
+                if (!global.configModule[module.config.name]) {
+                    global.configModule[module.config.name] = {};
+                }
+                for (const [key, value] of Object.entries(module.config.envConfig)) {
+                    global.configModule[module.config.name][key] = 
+                        global.config[module.config.name]?.[key] || value;
+                }
+            }
+
+            if (module.onLoad) {
+                module.onLoad({ api, models: null });
+            }
+
+            if (module.handleEvent) {
+                global.client.eventRegistered.push(module.config.name);
+            }
+
+            global.client.commands.set(module.config.name, module);
+            loadedCount++;
+
+        } catch (error) {
+            logger.loader(`❌ Failed to load ${file}: ${error.message}`, "error");
+            failedCount++;
+        }
+    }
+
+    logger.loader(`✅ Loaded ${loadedCount} commands | ❌ Failed ${failedCount} commands`);
+    return { loadedCount, failedCount };
+}
+
+/* ========================== EVENT LOADER FUNCTION ========================== */
+
+function loadEvents(api) {
+    console.log("\n📂 Loading events...");
+
+    const eventPath = join(global.client.mainPath, 'scripts/events');
+    const eventFiles = readdirSync(eventPath).filter(file => 
+        file.endsWith('.js') && 
+        !global.config.eventDisabled?.includes(file)
+    );
+
+    let loadedCount = 0;
+    let failedCount = 0;
+
+    for (const file of eventFiles) {
+        try {
+            const event = require(join(eventPath, file));
+
+            if (!event.config || !event.run) {
+                throw new Error("Invalid event structure");
+            }
+
+            if (global.client.events.has(event.config.name)) {
+                throw new Error(`Event name "${event.config.name}" already exists`);
+            }
+
+            if (event.config.dependencies) {
+                installDependencies(event.config.dependencies, event.config.name);
+            }
+
+            if (event.config.envConfig) {
+                if (!global.configModule[event.config.name]) {
+                    global.configModule[event.config.name] = {};
+                }
+                for (const [key, value] of Object.entries(event.config.envConfig)) {
+                    global.configModule[event.config.name][key] = 
+                        global.config[event.config.name]?.[key] || value;
+                }
+            }
+
+            if (event.onLoad) {
+                event.onLoad({ api, models: null });
+            }
+
+            global.client.events.set(event.config.name, event);
+            loadedCount++;
+
+        } catch (error) {
+            logger.loader(`❌ Failed to load ${file}: ${error.message}`, "error");
+            failedCount++;
+        }
+    }
+
+    logger.loader(`✅ Loaded ${loadedCount} events | ❌ Failed ${failedCount} events`);
+    return { loadedCount, failedCount };
+}
+
+/* ========================== DEPENDENCY INSTALLER ========================== */
+
+function installDependencies(dependencies, moduleName) {
+    for (const [dep, version] of Object.entries(dependencies)) {
+        try {
+            if (!global.nodemodule[dep]) {
+                if (listPackage[dep] || listbuiltinModules.includes(dep)) {
+                    global.nodemodule[dep] = require(dep);
+                } else {
+                    const depPath = join(__dirname, 'nodemodules', 'node_modules', dep);
+
+                    try {
+                        global.nodemodule[dep] = require(depPath);
+                    } catch {
+                        logger.loader(`📦 Installing ${dep} for ${moduleName}...`, "warn");
+
+                        const versionTag = (version && version !== '*') ? `@${version}` : '';
+                        execSync(`npm install ${dep}${versionTag} --no-package-lock --no-save`, {
+                            stdio: 'ignore',
+                            cwd: join(__dirname, 'nodemodules')
+                        });
+
+                        delete require.cache[require.resolve(depPath)];
+                        global.nodemodule[dep] = require(depPath);
+                    }
+                }
+            }
+        } catch (error) {
+            logger.loader(`⚠️ Failed to install ${dep} for ${moduleName}`, "warn");
+        }
+    }
+}
+
+/* ========================== BOT INITIALIZATION ========================== */
+
+async function initializeBot({ models }) {
+    console.log("\n" + "=".repeat(50));
+    console.log("🤖 LOGGING INTO FACEBOOK... 🤖");
+    console.log("=".repeat(50) + "\n");
+
+    login({ appState }, async (err, api) => {
+        if (err) {
+            logger.loader("❌ Login failed! Check your cookies", "error");
+            console.error(err);
+            process.exit(1);
+        }
+
+        api.setOptions(global.config.FCAOption || {});
+
+        writeFileSync(
+            join(global.client.mainPath, global.config.APPSTATEPATH || "appstate.json"),
+            JSON.stringify(api.getAppState(), null, 2)
+        );
+
+        global.client.api = api;
+        global.client.timeStart = Date.now();
+        global.config.version = '2.0.0';
+
+        console.log("\n" + "=".repeat(50));
+        console.log("✅ LOGIN SUCCESSFUL! ✅");
+        console.log("=".repeat(50) + "\n");
+
+        const commands = loadCommands(api);
+        const events = loadEvents(api);
+
+        console.log("\n" + "=".repeat(50));
+        console.log("📊 BOT STARTUP SUMMARY 📊");
+        console.log("=".repeat(50));
+        console.log(`⏰ Time: ${moment.tz("Asia/Dhaka").format("HH:mm:ss DD/MM/YYYY")}`);
+        console.log(`📦 Commands: ${commands.loadedCount} loaded, ${commands.failedCount} failed`);
+        console.log(`📦 Events: ${events.loadedCount} loaded, ${events.failedCount} failed`);
+        console.log(`⚡ Startup Time: ${((Date.now() - global.client.timeStart) / 1000).toFixed(2)}s`);
+        console.log("=".repeat(50) + "\n");
+
+        try {
+            unlinkSync(global.client.configPath + '.temp');
+        } catch (e) {}
+
+        const listener = require('./includes/listen')({ api, models });
+
+        global.handleListen = api.listenMqtt((error, message) => {
+            if (error) {
+                logger.loader(`❌ Listener error: ${JSON.stringify(error)}`, "error");
+                return;
+            }
+
+            if (['presence', 'typ', 'read_receipt'].includes(message.type)) {
+                return;
+            }
+
+            if (global.config.DeveloperMode) {
+                console.log(message);
+            }
+
+            return listener(message);
+        });
+
+        logger.loader("✅ Bot is now running! 🚀");
+        console.log("\n" + "=".repeat(50));
+        console.log("🎯 SAGOR BOT IS ONLINE! 🎯");
+        console.log("=".repeat(50) + "\n");
+    });
+}
+
+/* ========================== DATABASE CONNECTION ========================== */
+
+(async () => {
+    try {
+        await sequelize.authenticate();
+        logger.loader("✅ Database connected successfully!");
+
+        const models = require('./includes/database/model')({ Sequelize, sequelize });
+        await initializeBot({ models });
+
+    } catch (error) {
+        logger.loader(`❌ Database connection failed: ${error.message}`, "error");
+        process.exit(1);
+    }
+})();
+
+/* ========================== ERROR HANDLERS ========================== */
+
+process.on('unhandledRejection', (error) => {
+    if (global.config.DeveloperMode) {
+        console.error('Unhandled Rejection:', error);
+    }
+});
+
+process.on('uncaughtException', (error) => {
+    if (global.config.DeveloperMode) {
+        console.error('Uncaught Exception:', error);
+    }
+});
+
+process.on('SIGINT', () => {
+    console.log("\n\n👋 Shutting down SAGOR BOT...");
+    if (global.handleListen) {
+        global.handleListen.stopListening();
+    }
+    process.exit(0);
+});
+
+// ==================== END OF MAIN FILE ====================
