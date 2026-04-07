@@ -47,6 +47,9 @@ Mirai-Bot/
 ├── commands/
 ├── events/
 ├── scripts/
+├── SaGor.js
+├── index.html
+├── COOKIES.txt
 ├── config.json
 ├── index.js
 ├── package.json
